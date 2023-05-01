@@ -1,0 +1,62 @@
+@use '../abstracts/' as *;
+
+.fs-xl {
+  font-size: rem(40);
+  line-height: get-line-height(40, 50.4);
+
+  @include breakpoint(xl) {
+    font-size: rem(56);
+    line-height: get-line-height(56, 70.56);
+  }
+}
+
+.fs-l {
+  font-size: rem(32);
+  line-height: get-line-height(32, 40.32);
+
+  @include breakpoint(xl) {
+    font-size: rem(40);
+    line-height: get-line-height(40, 50.4);
+  }
+}
+
+.fs-m {
+  font-size: rem(24);
+  line-height: get-line-height(24, 32);
+
+  @include breakpoint(xl) {
+    font-size: rem(32);
+    line-height: get-line-height(32, 40);
+  }
+}
+
+.fs-s {
+  font-size: rem(20);
+  line-height: get-line-height(20, 25.2);
+
+  @include breakpoint(xl) {
+    font-size: rem(24);
+    line-height: get-line-height(24, 30.24);
+  }
+}
+
+.fs-body-m {
+  font-size: rem(16);
+  line-height: get-line-height(16, 26);
+
+  @include breakpoint(xl) {
+    font-size: rem(18);
+    line-height: get-line-height(18, 28);
+  }
+}
+
+.fs-body-s {
+  font-size: rem(14);
+  line-height: get-line-height(14, 28);
+
+  @include breakpoint(xl) {
+    font-size: rem(16);
+    line-height: get-line-height(16, 28);
+  }
+}
+

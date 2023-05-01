@@ -1,0 +1,115 @@
+:root {
+  --ff-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --clr-primary-1: hsl(233, 54%, 16%)
+  --clr-primary-2: hsl(234, 25%, 52%);
+  --clr-primary-3: hsl(232, 10%, 56%);
+  --clr-primary-4: hsl(341, 92%, 62%);
+  --clr-neutral-1: hsl(0, 0%, 100%);
+  --clr-primary-2: hsl(341, 100%, 83%);
+  --grdt-1-clr-1: rgba(255, 111, 72, 1);
+  --grdt-1-clr-2: rgba(240, 42, 166, 1);
+  --grdt-2-clr-1: rgba(72, 81, 255, 1);
+  --grdt-2-clr-2: rgba(240, 42, 166, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img, svg, picture, video {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+.fs-xl {
+  font-size: 2.5rem;
+  line-height: 1.26;
+}
+@media (min-width: 75rem) {
+  .fs-xl {
+    font-size: 3.5rem;
+    line-height: 1.26;
+  }
+}
+
+.fs-l {
+  font-size: 2rem;
+  line-height: 1.26;
+}
+@media (min-width: 75rem) {
+  .fs-l {
+    font-size: 2.5rem;
+    line-height: 1.26;
+  }
+}
+
+.fs-m {
+  font-size: 1.5rem;
+  line-height: 1.3333333333;
+}
+@media (min-width: 75rem) {
+  .fs-m {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}
+
+.fs-s {
+  font-size: 1.25rem;
+  line-height: 1.26;
+}
+@media (min-width: 75rem) {
+  .fs-s {
+    font-size: 1.5rem;
+    line-height: 1.26;
+  }
+}
+
+.fs-body-m {
+  font-size: 1rem;
+  line-height: 1.625;
+}
+@media (min-width: 75rem) {
+  .fs-body-m {
+    font-size: 1.125rem;
+    line-height: 1.5555555556;
+  }
+}
+
+.fs-body-s {
+  font-size: 0.875rem;
+  line-height: 2;
+}
+@media (min-width: 75rem) {
+  .fs-body-s {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
