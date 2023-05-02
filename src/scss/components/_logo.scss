@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+.logo {
+  display: block;
+  max-width: rem(89);
+  cursor: pointer;
+
+  @include breakpoint(xl) {
+    max-width: rem(114);
+  }
+}

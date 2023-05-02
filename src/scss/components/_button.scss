@@ -1,0 +1,81 @@
+@use '../abstracts/' as *;
+
+.btn {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: rem(28);
+	text-decoration: none;
+	font-size: rem(16);
+	line-height: get-line-height(16, 26);
+	font-weight: 700;
+	color: var(--clr-neutral-1);
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+
+	@include breakpoint(xl) {
+		font-size: rem(18);
+		line-height: get-line-height(18, 28);	
+	}
+
+	&--1 {
+		background-color: var(--clr-primary-1);
+		padding: rem(9) rem(24) rem(11);
+
+		@include breakpoint(xl) {
+			padding: rem(14) rem(32);
+		}
+
+		&:hover {
+			background-color: var(--clr-primary-2);
+		}
+	}
+
+	&--2 {
+		background: linear-gradient(180deg, var(--grdt-1-clr-1) 0%, var(--grdt-1-clr-2) 100%);
+		padding: rem(9) rem(24) rem(11);
+
+		@include breakpoint(xl) {
+			padding: rem(14) rem(32);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(0deg, var(--grdt-hover), var(--grdt-hover)), linear-gradient(180deg, var(--grdt-1-clr-1) -54.32%, var(--grdt-1-clr-2) 100%);
+			z-index: -1;
+			transition: opacity 200ms ease-in-out;
+			opacity: 0;
+		}
+
+		&:hover::before {
+			opacity: 1;
+		}
+	}
+
+	&--3 {
+		background: linear-gradient(180deg, var(--grdt-2-clr-1) 0%, var(--grdt-2-clr-2) 100%);
+		padding: rem(15) rem(38);
+
+		@include breakpoint(xl) {
+			padding: rem(19) rem(32) rem(16);
+		}
+
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(0deg, var(--grdt-hover), var(--grdt-hover)), linear-gradient(180deg, var(--grdt-2-clr-1) 0%, var(--grdt-2-clr-2) 100%);
+			z-index: -1;
+			transition: opacity 200ms ease-in-out;
+			opacity: 0;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
