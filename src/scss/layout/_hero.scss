@@ -1,0 +1,66 @@
+@use '../abstracts/' as *;
+
+.hero {
+  padding-top: rem(102);
+  position: relative;
+
+  @include breakpoint(md) {
+    padding-top: rem(171);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  @include breakpoint(xl) {
+    padding-top: rem(252);
+  }
+
+  &__text {
+    margin-bottom: rem(25);
+
+    @include breakpoint(md) {
+      grid-column: 1 / 8;
+    }
+
+    @include breakpoint(xl) {
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__title {
+    color: var(--clr-primary-1);
+    font-weight: 800;
+    margin-bottom: rem(26);
+
+    @include breakpoint(xl) {
+      margin-bottom: rem(29);
+    }
+  }
+
+  &__description {
+    color: var(--clr-primary-3);
+    margin-bottom: rem(24);
+
+    @include breakpoint(xl) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__picture {
+    @include breakpoint(md) {
+      min-width: 100%;
+      position: absolute;
+      top: rem(-92.13);
+      right: rem(-343);
+    }
+
+    @include breakpoint(xl) {
+      top: rem(-146);
+      right: rem(-535);
+    }
+  }
+
+  &__img {
+    margin-inline: auto;
+  }
+
+}
