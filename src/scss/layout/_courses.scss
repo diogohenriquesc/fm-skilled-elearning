@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+
+.courses {
+	margin-bottom: rem(80);
+  background: linear-gradient(180deg, var(--clr-neutral-1) 0%, var(--clr-neutral-3) 100%);
+
+  @include breakpoint(md) {
+    margin-bottom: rem(86);
+  }
+
+  @include breakpoint(xl) {
+    margin-bottom: rem(140);
+  }
+
+	&__grid {
+    display: grid;
+    gap: rem(40);
+
+		@include breakpoint(md) {
+			grid-template-columns: repeat(2, 1fr);
+      gap: rem(56) rem(10);
+		}
+
+    @include breakpoint(xl) {
+			grid-template-columns: repeat(3, 1fr);
+      gap: rem(80) rem(30);
+		}
+	}
+}

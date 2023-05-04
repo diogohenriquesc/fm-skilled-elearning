@@ -1,0 +1,71 @@
+@use '../abstracts/' as *;
+
+.courses__card {
+	position: relative;
+	padding: rem(56) rem(28) rem(32);
+	border-radius: rem(10);
+	box-shadow: 0px 25px 50px 0px var(--clr-card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+
+	@include breakpoint(md) {
+		padding: rem(56) rem(22) rem(32) rem(32);
+	}
+
+	@include breakpoint(xl) {
+		padding: rem(64) rem(32) rem(40);
+	}
+
+	&-icon {
+		position: absolute;
+		left: rem(32);
+		top: 0;
+		transform: translateY(-50%);
+	}
+
+	&-title {
+		color: var(--clr-primary-1);
+		font-weight: 800;
+		margin-bottom: rem(16);
+
+		@include breakpoint(xl) {
+			margin-bottom: rem(24);
+		}
+	}
+
+	&-description {
+		color: var(--clr-primary-3);
+		margin-bottom: rem(24);
+
+		@include breakpoint(xl) {
+			margin-bottom: rem(52);
+		}
+	}
+
+	&-link {
+		text-decoration: none;
+		color: var(--clr-primary-4);
+		font-weight: 700;
+		transition: color 200ms ease-in-out;
+
+		&:hover {
+			color: var(--clr-neutral-2);
+		}
+	}
+
+	&--intro {
+		padding: rem(24) rem(28) rem(32);
+		background: linear-gradient(180deg, var(--clr-card-grdt-1), var(--clr-card-grdt-2));
+		color: var(--clr-neutral-1);
+
+		@include breakpoint(md) {
+			padding: rem(56) rem(22) rem(32) rem(32);
+		}
+
+		@include breakpoint(xl) {
+			padding: rem(64) rem(32) rem(40);
+		}
+	}
+}

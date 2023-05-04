@@ -2,16 +2,19 @@
 
 .hero {
   padding-top: rem(102);
+  padding-bottom: rem(66);
   position: relative;
 
   @include breakpoint(md) {
     padding-top: rem(171);
+    padding-bottom: rem(186);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
 
   @include breakpoint(xl) {
     padding-top: rem(252);
+    padding-bottom: rem(226);
   }
 
   &__text {
