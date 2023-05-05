@@ -1,15 +1,15 @@
 @use '../abstracts/' as *;
 
 .courses {
-	margin-bottom: rem(80);
+	padding-bottom: rem(80);
   background: linear-gradient(180deg, var(--clr-neutral-1) 0%, var(--clr-neutral-3) 100%);
 
   @include breakpoint(md) {
-    margin-bottom: rem(86);
+    padding-bottom: rem(86);
   }
 
   @include breakpoint(xl) {
-    margin-bottom: rem(140);
+    padding-bottom: rem(140);
   }
 
 	&__grid {

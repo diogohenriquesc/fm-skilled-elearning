@@ -57,7 +57,7 @@
 
 	&--intro {
 		padding: rem(24) rem(28) rem(32);
-		background: linear-gradient(180deg, var(--clr-card-grdt-1), var(--clr-card-grdt-2));
+		background: linear-gradient(180deg, var(--grdt-2-1), var(--grdt-2-2));
 		color: var(--clr-neutral-1);
 
 		@include breakpoint(md) {

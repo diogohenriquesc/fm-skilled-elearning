@@ -10,14 +10,12 @@
   --clr-neutral-1: hsl(0, 0%, 100%);
   --clr-neutral-2: hsl(341, 100%, 83%);
   --clr-neutral-3: hsla(234, 100%, 97%, 1);
-  --btn-1-grdt-1: rgba(72, 81, 255, 1);
-  --btn-1-grdt-2: rgba(240, 42, 166, 1);
-  --btn-2-grdt-1: rgba(255, 111, 72, 1);
-  --btn-2-grdt-2: rgba(240, 42, 166, 1);
-  --btn-grdt-hover: rgba(255, 255, 255, 0.5);
+  --grdt-1-1: hsl(237, 100%, 64%);
+  --grdt-1-2: hsla(322, 87%, 55%, 1);
+  --grdt-2-1: hsl(13, 100%, 64%);
+  --grdt-2-2: hsla(322, 87%, 55%, 1);
+  --grdt-hover: hsla(0, 0%, 100%, 0.5);
   --clr-card-shadow: hsla(233, 92%, 29%, 0.04);
-  --clr-card-grdt-1: hsla(13, 100%, 64%, 1);
-  --clr-card-grdt-2: hsla(322, 87%, 55%, 1);
 }
 
 *, *::before, *::after {
@@ -156,7 +154,7 @@ body {
   background-color: var(--clr-primary-2);
 }
 .btn--2 {
-  background: linear-gradient(180deg, var(--btn-1-grdt-1) 0%, var(--btn-1-grdt-2) 100%);
+  background: linear-gradient(180deg, var(--grdt-1-1) 0%, var(--grdt-1-2) 100%);
   padding: 0.5625rem 1.5rem 0.6875rem;
 }
 @media (min-width: 75rem) {
@@ -168,7 +166,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, var(--btn-grdt-hover), var(--btn-grdt-hover)), linear-gradient(180deg, var(--btn-1-grdt-1) -54.32%, var(--btn-1-grdt-2) 100%);
+  background: linear-gradient(0deg, var(--grdt-hover), var(--grdt-hover)), linear-gradient(180deg, var(--grdt-1-1) -54.32%, var(--grdt-1-2) 100%);
   z-index: -1;
   transition: opacity 200ms ease-in-out;
   opacity: 0;
@@ -177,7 +175,7 @@ body {
   opacity: 1;
 }
 .btn--3 {
-  background: linear-gradient(180deg, var(--btn-2-grdt-1) 0%, var(--btn-2-grdt-2) 100%);
+  background: linear-gradient(180deg, var(--grdt-2-1) 0%, var(--grdt-2-2) 100%);
   padding: 0.9375rem 2.375rem;
 }
 @media (min-width: 75rem) {
@@ -189,7 +187,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, var(--btn-grdt-hover), var(--btn-grdt-hover)), linear-gradient(180deg, var(--btn-2-grdt-1) 0%, var(--btn-2-grdt-2) 100%);
+  background: linear-gradient(0deg, var(--grdt-hover), var(--grdt-hover)), linear-gradient(180deg, var(--grdt-2-1) 0%, var(--grdt-2-2) 100%);
   z-index: -1;
   transition: opacity 200ms ease-in-out;
   opacity: 0;
@@ -265,7 +263,7 @@ body {
 }
 .courses__card--intro {
   padding: 1.5rem 1.75rem 2rem;
-  background: linear-gradient(180deg, var(--clr-card-grdt-1), var(--clr-card-grdt-2));
+  background: linear-gradient(180deg, var(--grdt-2-1), var(--grdt-2-2));
   color: var(--clr-neutral-1);
 }
 @media (min-width: 45rem) {
@@ -277,6 +275,18 @@ body {
   .courses__card--intro {
     padding: 4rem 2rem 2.5rem;
   }
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--clr-neutral-1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--grdt-2-1), var(--grdt-2-2));
 }
 
 .header {
@@ -369,17 +379,17 @@ body {
 }
 
 .courses {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
   background: linear-gradient(180deg, var(--clr-neutral-1) 0%, var(--clr-neutral-3) 100%);
 }
 @media (min-width: 45rem) {
   .courses {
-    margin-bottom: 5.375rem;
+    padding-bottom: 5.375rem;
   }
 }
 @media (min-width: 75rem) {
   .courses {
-    margin-bottom: 8.75rem;
+    padding-bottom: 8.75rem;
   }
 }
 .courses__grid {
@@ -397,6 +407,21 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem 1.875rem;
   }
+}
+
+.footer {
+  background-color: var(--clr-primary-1);
+  padding-block: 2.25rem;
+}
+@media (min-width: 75rem) {
+  .footer {
+    padding-block: 2rem;
+  }
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=main.css.map */

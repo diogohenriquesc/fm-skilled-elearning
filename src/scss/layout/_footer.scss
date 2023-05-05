@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+.footer {
+	background-color: var(--clr-primary-1);
+	padding-block: rem(36);
+
+	@include breakpoint(xl) {
+		padding-block: rem(32);
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
